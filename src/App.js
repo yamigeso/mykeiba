@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
 
-function App() {
+export default function RootLayout({ children }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className="bg">
+          <div className="main">
+            <div className="main-content">{children}</div>
+          </div>
+          <div id="Pages">
+            {/* <Link to="/"><div>Home</div></Link>
+            <Link to="/Registration"><div>Registration</div></Link>
+            <Link to="/Race"><div>Datas</div></Link>
+            <Link to="/ThisWeek"><div>This Week</div></Link> */}
+          </div>
+        </div>
   );
 }
-
-export default App;
